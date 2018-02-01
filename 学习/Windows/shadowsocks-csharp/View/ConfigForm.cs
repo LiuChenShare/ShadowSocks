@@ -37,7 +37,7 @@ namespace Shadowsocks.View
 
             LoadCurrentConfiguration();
         }
-
+        
         private void UpdateTexts()
         {
             AddButton.Text = I18N.GetString("&Add");
@@ -61,6 +61,11 @@ namespace Shadowsocks.View
             this.Text = I18N.GetString("Edit Servers");
         }
 
+        /// <summary>
+        /// 配置改变的控制器
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void controller_ConfigChanged(object sender, EventArgs e)
         {
             LoadCurrentConfiguration();

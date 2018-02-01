@@ -7,6 +7,9 @@ namespace Shadowsocks.Controller
 {
     using Shadowsocks.Properties;
 
+    /// <summary>
+    /// 国际化（想当于文本翻译）
+    /// </summary>
     public static class I18N
     {
         private static Dictionary<string, string> _strings = new Dictionary<string, string>();
@@ -44,6 +47,11 @@ namespace Shadowsocks.Controller
             }
         }
 
+        /// <summary>
+        /// 尝试获取对应语言的文本
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public static string GetString(string key)
         {
             return _strings.ContainsKey(key)
